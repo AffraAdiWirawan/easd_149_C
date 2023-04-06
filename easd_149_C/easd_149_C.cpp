@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int a[20];
+int wira[20];
 int n;
 
 
@@ -29,19 +29,19 @@ void input() {
     cout << " \n______________________" << endl;
     for (int i = 0; i < n; i++) {
         cout << " Data ke-" << (i + 1) << " : ";
-        cin >> a[i];
+        cin >> wira[i];
     }
 }
 
 void swap(int x, int y) 
 {
     int temp;
-    temp = a[x];
-    a[x] = a[y];
-    a[y] = temp;
+    temp = wira[x];
+    wira[x] = wira[y];
+    wira[y] = temp;
 }
 
-void selectionsort(int a[20], int n) {
+void selectionsort() {
     int i;
     int j;
     int min_idx;
@@ -50,11 +50,11 @@ void selectionsort(int a[20], int n) {
         min_idx = j;
         for (j = i + 1; j < n-1; j++) {
             min_idx = j;
-            if (a[i] < a[j])
+            if (wira[i] < wira[j])
                 min_idx = i;
         } 
         if (min_idx = i)
-            swap(a[j], a[min_idx]);
+            swap(wira[j], wira[min_idx]);
     }
 }
 
@@ -64,9 +64,9 @@ void display() {
     cout << "\n====================================" << endl;
     cout << "Element Array yang telah tersusun" << endl;
     cout << "====================================" << endl;
-    for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
     {
-        cout << a[i] << "";
+        cout << wira[j] << "";
     }
     cout << endl;
 }
@@ -74,7 +74,7 @@ void display() {
 int main()
 {
     input();
-    selectionsort(int a[20], int n);
+    selectionsort();
     display();
     system("Pause");
 
