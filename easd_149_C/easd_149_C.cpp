@@ -52,7 +52,7 @@ void selectionsort(int a[20], int n) {
             min_idx = j;
             if (a[i] < a[j])
                 min_idx = i;
-        }
+        } 
         if (min_idx = i)
             swap(a[j], a[min_idx]);
     }
